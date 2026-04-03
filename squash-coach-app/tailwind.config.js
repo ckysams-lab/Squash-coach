@@ -5,7 +5,16 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      // We can add custom animations or keyframes here later
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        mono: ['monospace'],
+      },
+    },
   },
-  plugins: [],
+  //  ▼▼▼ THIS IS THE CRITICAL UPDATE ▼▼▼
+  plugins: [
+    require("tailwindcss-animate")
+  ],
 }
